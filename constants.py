@@ -33,15 +33,14 @@ def sum_of_array():
 
 def loop_with_return():
     res = 0                         # O(1)
-    for i in range(10000000000):    # O(10000000000)
-        res += i                    # O(10000000000)
+    for i in range(10000):          # O(10000)
+        res += i                    # O(10000)
     return res                      # O(1)
 
 
 def loop_with_no_return():
-    for i in range(10000000000):    # O(10000000000)
-        if i == 9999999:            # O(9999999)
-            print(i)                # O(1)
+    for i in range(10000):          # O(10000)
+        if i == 999:                # O(999)
             break                   # O(1)
 
 
@@ -65,20 +64,30 @@ def _is_el_exist(arr, i, return_val=False):
         return False                            # O(1)
 
 def sum_of_four_elms2(arr):
-    result = 0                      # O(1)
-    if _is_el_exist(arr, 0):          # O(1)
-        result += arr[0]             # O(1)
+    result = 0                          # O(1)
+    if _is_el_exist(arr, 0):            # O(1)
+        result += arr[0]                # O(1)
 
-    if _is_el_exist(arr, 1):          # O(1)
-        result += arr[1]             # O(1)
+    if _is_el_exist(arr, 1):            # O(1)
+        result += arr[1]                # O(1)
 
-    if _is_el_exist(arr, 2):          # O(1)
-        result += arr[2]             # O(1)
+    if _is_el_exist(arr, 2):            # O(1)
+        result += arr[2]                # O(1)
 
-    if _is_el_exist(arr, 3):          # O(1)
-        result += arr[3]             # O(1)
+    if _is_el_exist(arr, 3):            # O(1)
+        result += arr[3]                # O(1)
 
-    return result                   # O(1)
+    return result                       # O(1)
 
-print(sum_of_four_elms2([1,2,5]))
+
+def call_all():
+    sum_of_two_num(1, 2)                            # O(1)
+    sum_of_three_num(1, 2, 3)                       # O(1)
+    sum_of_two(1, 2)                                # O(1)
+    multiply_by_2(1, 2, 3, 4, 5)                    # O(1)
+    sum_of_array()                                  # O(1)
+    loop_with_return()                              # O(1)
+    loop_with_no_return()                           # O(1)
+    sum_of_four_elms([1, 2, 3, 4, 5, 6, 7, 8])      # O(1)
+    sum_of_four_elms2([1, 2, 3, 4, 5, 6, 7, 8])     # O(1)
 
